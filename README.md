@@ -1,4 +1,4 @@
-# SMO WGS84 TO BNG - smo_wgs84_to_bng 
+# SMO WGS84 TO BNG
 
 Convert between WGS84 (GPS latitude/longitude) and OSGB36 British National Grid (easting/northing) using a 7-parameter Helmert transformation. Pure Ruby, no external dependencies.
 
