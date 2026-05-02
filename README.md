@@ -2,6 +2,15 @@
 
 Convert between WGS84 (GPS latitude/longitude) and OSGB36 British National Grid (easting/northing) using a 7-parameter Helmert transformation. Pure Ruby, no external dependencies.
 
+<p align="center">
+  <a href="https://buymeacoffee.com/smadrid">
+    <img src="https://raw.githubusercontent.com/Sebasmadridmx/SMO-WGS84-TO-BNG/main/temp_png/buymecoffeeqr.png" width="250" alt="Buy Me a Coffee QR code">
+  </a>
+  <br><br>
+  <a href="https://buymeacoffee.com/smadrid"><img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Buy Me a Coffee"></a>
+  <a href="https://www.linkedin.com/in/sebastianmadridontiverosmx/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+</p>
+
 ---
 
 ## Installation
@@ -20,7 +29,7 @@ gem 'smo_wgs84_to_bng'
 
 ## Usage
 
-### Forward conversion (WGS84 to BNG)
+### Forward conversion (WGS84 → BNG)
 
 #### Single point
 
@@ -62,7 +71,9 @@ SmoWgs84ToBng.convert_many_to_json(points)
 # => '[{"id":"A",...},{"id":"B",...}]'
 ```
 
-### Reverse conversion (BNG to WGS84)
+---
+
+### Reverse conversion (BNG → WGS84)
 
 #### Single point
 
@@ -94,7 +105,7 @@ SmoWgs84ToBng.reverse_many_to_json(points)
 
 ## Accuracy
 
-This gem uses a 7-parameter Helmert transformation based on the parameters published in the Ordnance Survey guide "A Guide to Coordinate Systems in Great Britain". Typical accuracy is approximately 3-5 metres across mainland Great Britain. It is suitable for GIS, asset management, and field data workflows but is not appropriate for survey-grade or engineering applications where sub-metre accuracy is required.
+This gem uses a 7-parameter Helmert transformation based on the parameters published in the Ordnance Survey guide *A Guide to Coordinate Systems in Great Britain*. Typical accuracy is approximately 3–5 metres across mainland Great Britain. It is suitable for GIS, asset management, and field data workflows but is not appropriate for survey-grade or engineering applications where sub-metre accuracy is required.
 
 ---
 
@@ -112,10 +123,12 @@ All inputs are validated. The following error classes are defined:
 
 **Accepted bounds:**
 
-- Latitude: 49.0 to 61.0
-- Longitude: -8.5 to 2.0
-- Easting: 0 to 700,000
-- Northing: 0 to 1,300,000
+| Parameter | Min | Max |
+|---|---|---|
+| Latitude | 49.0 | 61.0 |
+| Longitude | -8.5 | 2.0 |
+| Easting | 0 | 700,000 |
+| Northing | 0 | 1,300,000 |
 
 Batch methods include the index of the offending point in the error message, e.g. `"id is required for point at index 2"`.
 
@@ -123,8 +136,10 @@ Batch methods include the index of the offending point in the error message, e.g
 
 ## Coordinate Systems
 
-- **WGS84** (EPSG:4326): The geographic coordinate system used by GPS. Coordinates expressed as latitude and longitude in decimal degrees.
-- **OSGB36 British National Grid** (EPSG:27700): The coordinate reference system used by Ordnance Survey for Great Britain. Coordinates expressed as easting and northing in metres.
+| System | EPSG | Description |
+|---|---|---|
+| WGS84 | EPSG:4326 | Geographic coordinate system used by GPS. Coordinates expressed as latitude and longitude in decimal degrees. |
+| OSGB36 British National Grid | EPSG:27700 | Coordinate reference system used by Ordnance Survey for Great Britain. Coordinates expressed as easting and northing in metres. |
 
 ---
 
@@ -144,12 +159,14 @@ Batch methods include the index of the offending point in the error message, e.g
 
 ---
 
-## Buy Me a Coffee
+## Support
 
-If this gem saves you time, a coffee is always appreciated.
+Hydraulic modelling licences are expensive and I try to keep everything I build open source and free to use. If this gem saves you time, any support is genuinely appreciated.
 
 <p align="center">
   <a href="https://buymeacoffee.com/smadrid">
-    <img src="https://raw.githubusercontent.com/Sebasmadridmx/SMO-WGS84-TO-BNG/main/qr-code.png" width="250" alt="Buy Me a Coffee QR code">
+    <img src="https://raw.githubusercontent.com/Sebasmadridmx/SMO-WGS84-TO-BNG/main/temp_png/buymecoffeeqr.png" width="250" alt="Buy Me a Coffee QR code">
   </a>
+  <br>
+  Or via <a href="https://buymeacoffee.com/smadrid">buymeacoffee.com/smadrid</a>
 </p>
