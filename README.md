@@ -1,6 +1,6 @@
 # SMO WGS84 TO BNG
 
-Convert between WGS84 (GPS latitude/longitude) and OSGB36 British National Grid (easting/northing) using a 7-parameter Helmert transformation. Pure Ruby, no external dependencies.
+Convert between WGS84 (GPS latitude/longitude) and OSGB36 British National Grid (easting/northing) using a 7-parameter Helmert transformation. Pure Ruby, no external dependencies. Hydraulic modelling licences are expensive and I try to keep everything I build open source and free to use. If this gem saves you time, any support is genuinely appreciated.
 
 <p align="center">
   <a href="https://buymeacoffee.com/smadrid">
