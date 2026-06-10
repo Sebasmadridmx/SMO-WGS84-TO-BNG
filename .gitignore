@@ -9,3 +9,6 @@
 /.bundle/
 /vendor/bundle
 Gemfile.lock
+.ruby-lsp/
+.DS_Store
+playground.rb
